@@ -49,8 +49,5 @@ export const Normal = styled.div<{ gap?: string; s?: boolean }>`
   justify-content: center;
   gap: ${({ gap }) => gap || "30px"};
 
-  @media (max-width: 500px) {
-    gap: 30px;
-  }
 
 `;

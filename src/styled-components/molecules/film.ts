@@ -6,11 +6,6 @@ export const FilmContainer = styled.figure`
   figure {
     width: 180px;
     height: 270px;
-
-    @media (max-width: 500px) {
-      width: 120px;
-      height: 180px;
-    }
   }
   h3 {
     font-size: 15px;
