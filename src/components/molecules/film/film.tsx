@@ -16,7 +16,7 @@ const Film: FC<Films> = ({
   name,
   first_air_date,
 }) => {
-  const { title: type } = useTranslateParams();
+
 
   return (
     <Link href={`/${name ? "series" : "peliculas"}/${id}`}>

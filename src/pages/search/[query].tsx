@@ -11,15 +11,15 @@ export default function Searched() {
   return (
     <Layout title="Searches" description="The users can do searches here">
       <h2>Búsquedas</h2>
+      <Overview>
+        Resultados para <strong>{query}</strong> en películas
+      </Overview>
       <MainContainer
         fDirection="column"
         justify="flex-start"
         align="flex-start"
         pt="1rem"
       >
-        <Overview>
-          Resultados para <strong>{query}</strong> en películas
-        </Overview>
         <ListOfFilms
           type="normal"
           results={movieSearch?.results || []}

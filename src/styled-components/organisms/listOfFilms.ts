@@ -38,7 +38,7 @@ export const WithFilter = styled.div`
   }
   @media (max-width: 500px) {
     justify-content: center;
-    background-color: pink;
+    gap: 30px;
   }
 `;
 export const Normal = styled.div<{ gap?: string; s?: boolean }>`
@@ -46,8 +46,11 @@ export const Normal = styled.div<{ gap?: string; s?: boolean }>`
   flex-wrap: wrap;
   align-items: center;
   width: 100%;
-  background-color: red;
   justify-content: center;
-
   gap: ${({ gap }) => gap || "30px"};
+
+  @media (max-width: 500px) {
+    gap: 30px;
+  }
+
 `;
