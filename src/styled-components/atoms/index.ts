@@ -1,4 +1,5 @@
 export * from './button';
+export * from './content';
 export * from './figure';
 export * from './form';
 export * from './genre';

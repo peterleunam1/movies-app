@@ -29,13 +29,13 @@ export default function Accordion({
         visibility={withButton ? "hidden" : "visible"}
       >
         {title}
-        <span>
+      
           <Icon
             fill="fa-solid fa-caret-down"
             withTooltip={false}
             color="#586b91"
           />
-        </span>
+
       </TitleA>
       <div>{children}</div>
       {withButton && (

@@ -4,6 +4,7 @@ export const WithScroll = styled.div`
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
+  
   width: 100%;
   gap: 35px;
   overflow: auto;
@@ -27,7 +28,7 @@ export const WithScroll = styled.div`
 export const WithFilter = styled.div`
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   width: 76%;
   gap: 35px;
   padding-bottom: 20px;
@@ -44,10 +45,7 @@ export const WithFilter = styled.div`
 export const Normal = styled.div<{ gap?: string; s?: boolean }>`
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
-  justify-content: center;
   gap: ${({ gap }) => gap || "30px"};
-
-
 `;

@@ -2,15 +2,14 @@ import styled from "styled-components";
 
 export const FilmContainer = styled.figure`
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   cursor: pointer;
   figure {
     width: 180px;
-    height: 270px;
-
-    @media (max-width: 500px) {
-      width: 220px;
-      height: 330px;
-    }
+    height: auto;
   }
   h3 {
     font-size: 15px;
@@ -23,6 +22,7 @@ export const FilmContainer = styled.figure`
     align-items: center;
     justify-content: flex-start;
     margin-top: 2px;
+
     @media (max-width: 500px) {
       margin: 0;
     }
@@ -42,6 +42,7 @@ export const FilmContainer = styled.figure`
     display: flex;
     align-items: center;
     justify-content: flex-start;
+
     p {
       margin-left: 0.3125remx;
     }

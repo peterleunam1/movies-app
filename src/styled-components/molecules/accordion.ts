@@ -42,7 +42,11 @@ export const TitleA = styled.h3<{ visibility: string }>`
   align-items: center;
   cursor: pointer;
   padding-left: 0.6875rem;
+  background-color:red;
   span {
     visibility: ${(props) => props.visibility};
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;

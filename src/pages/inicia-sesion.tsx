@@ -7,11 +7,11 @@ import GoogleImage from "../../public/assets/google.png";
 
 export default function IniciaSesion() {
   const router = useRouter();
-  const { data: session, status } = useSession();
+  // const { data: session, status } = useSession();
 
-  if (status !== "loading" && status === "authenticated") {
-    router.push("/");
-  }
+  // if (status !== "loading" && status === "authenticated") {
+  //   router.push("/");
+  // }
 
   return (
     <MainLog>
