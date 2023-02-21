@@ -5,10 +5,10 @@ import { paramToString } from "@/utilities";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import { getSession } from "next-auth/react";
 import { useRouter } from "next/router";
-// {
-//   session,
-// }: InferGetServerSidePropsType<typeof getServerSideProps>
-const Searched = () => {
+
+const Searched = ({
+  session,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   const { query } = useRouter().query;
   const { movieSearch, tvSearch, loading } = useSearch(paramToString(query));
 
@@ -52,21 +52,21 @@ const Searched = () => {
     </Layout>
   );
 };
-// export const getServerSideProps: GetServerSideProps = async (context) => {
-//   const session = await getSession(context);
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const session = await getSession(context);
 
-//   if (!session)
-//     return {
-//       redirect: {
-//         destination: "/inicia-sesion",
-//         permanent: false,
-//       },
-//     };
+  if (!session)
+    return {
+      redirect: {
+        destination: "/inicia-sesion",
+        permanent: false,
+      },
+    };
 
-//   return {
-//     props: {
-//       session,
-//     },
-//   };
-// };
+  return {
+    props: {
+      session,
+    },
+  };
+};
 export default Searched;

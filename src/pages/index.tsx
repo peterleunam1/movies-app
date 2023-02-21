@@ -4,10 +4,9 @@ import { useTrendings } from "@/hooks";
 import { Layout, Filter, ListOfFilms } from "@/components";
 import { MainContainer } from "@/styled-components";
 
-// {
-//   session,
-// }: InferGetServerSidePropsType<typeof getServerSideProps>
-const Home = () => {
+const Home = ({
+  session,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   const { films, setEntertaiment, setFrecuence, laoding } = useTrendings();
 
   return (
@@ -25,21 +24,21 @@ const Home = () => {
   );
 };
 
-// export const getServerSideProps: GetServerSideProps = async (context) => {
-//   const session = await getSession(context);
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const session = await getSession(context);
 
-//   if (!session)
-//     return {
-//       redirect: {
-//         destination: "/inicia-sesion",
-//         permanent: false,
-//       },
-//     };
+  if (!session)
+    return {
+      redirect: {
+        destination: "/inicia-sesion",
+        permanent: false,
+      },
+    };
 
-//   return {
-//     props: {
-//       session,
-//     },
-//   };
-// };
+  return {
+    props: {
+      session,
+    },
+  };
+};
 export default Home;
