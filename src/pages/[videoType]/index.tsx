@@ -2,10 +2,7 @@ import { lazy, Suspense } from "react";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import { useRouter } from "next/router";
 import { getSession } from "next-auth/react";
-import {
-  useAllCategoriesOfVideoType,
-  useTranslateParams,
-} from "@/hooks";
+import { useAllCategoriesOfVideoType, useTranslateParams } from "@/hooks";
 import { Layout } from "@/components";
 import { toCapitalize } from "@/utilities";
 import { Subtitle } from "@/styled-components";
@@ -28,10 +25,9 @@ const IndexVideoType = ({
     upcoming,
     loading,
   } = useAllCategoriesOfVideoType();
-  // const {loading, popular} = usePopular()
 
   if (typeof window !== "undefined") {
-    if (parameter !== "movie" && parameter !== "tv") {
+    if (parameter !== "movie" && parameter !== "tv" && parameter !== "saved") {
       router.push("/");
     }
   }

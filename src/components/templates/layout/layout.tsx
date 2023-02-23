@@ -16,7 +16,7 @@ const Layout: FC<LayoutInterface> = ({ title, description, children }) => {
   const HandleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     !query && alert("Please enter a movie or Tv series");
-    router(`/search/${query}`);
+    router(`/busqueda/${query}`);
   };
   return (
     <>

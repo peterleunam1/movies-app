@@ -10,7 +10,7 @@ export const ButtonStyled = styled.button`
   transition: 0.3s ease background-color;
   color: #fff;
   cursor: pointer;
-  margin-bottom: 1.25rem;
+  margin-bottom: 2.5rem;
   &:hover {
     background-color: rgba(58, 73, 104, 0.87);
   }

@@ -26,10 +26,10 @@ const MediaDetails: FC<MediaDetailsInterface> = ({ detail, type }) => {
             ))}
           </Genre>
           <Title>{detail?.title || detail?.name}</Title>
-          <p>
+          <Text maxWidth="86%">
             <strong>Título original: </strong>
             {detail?.original_title || detail?.original_name}
-          </p>
+          </Text>
           <p>
             <strong>Fecha de estreno: </strong>
             {detail?.release_date || detail?.first_air_date}

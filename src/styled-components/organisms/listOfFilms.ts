@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const WithScroll = styled.div`
   display: flex;
   flex-wrap: nowrap;
-  align-items: center;
+  align-items: flex-start;
   
   width: 100%;
   gap: 35px;
@@ -38,14 +38,16 @@ export const WithFilter = styled.div`
     padding-left: 7%;
   }
   @media (max-width: 500px) {
-    justify-content: center;
     gap: 30px;
+    padding: 0;
+    justify-content: center;
   }
 `;
 export const Normal = styled.div<{ gap?: string; s?: boolean }>`
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  justify-content: center;
   width: 100%;
   gap: ${({ gap }) => gap || "30px"};
 `;

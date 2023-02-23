@@ -33,7 +33,7 @@ export const AcordeonContent = styled.section<{
   }
 `;
 export const TitleA = styled.h3<{ visibility: string }>`
-  width: 90%;
+  width: 95%;
   height: 1.25rem;
   font-weight: 400;
   font-size: 1rem;
@@ -41,8 +41,8 @@ export const TitleA = styled.h3<{ visibility: string }>`
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  padding-left: 0.6875rem;
-  background-color:red;
+  margin: 0 auto;
+
   span {
     visibility: ${(props) => props.visibility};
     display: flex;
